@@ -1,13 +1,20 @@
 // Fonction qui permet d'initialiser Vue.js
 Vue.createApp({
-    
+
   data() {
-    
+
     let id = 0;
-    let isErrorIni = 1;
+    let isErrorIni = 0;
+    
+
 
     return {
-      
+
+      titleClass: {
+        "red": isErrorIni,
+        "green": !isErrorIni,
+      },
+
       items: [
         { "id": ++id, "name": "Peugeot" },
         { "id": ++id, "name": "Renault" },
