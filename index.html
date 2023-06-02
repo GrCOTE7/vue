@@ -32,12 +32,14 @@
     </div>
 
     <hr>
-    <div><b>v-show:</b></div>
-    <div v-show="isError">
-      {{ errorMessage }}
-    </div>
-    <div v-show="!isError">
-      {{ errorMessage }}
+    <div class="bold" :class="{ 'red':isError, 'green': !isError }">v-show:</div>
+    <div :class="isError ? 'red' : 'green'">
+      <div v-show="isError">
+        {{ errorMessage }}
+      </div>
+      <div v-show="!isError">
+        {{ errorMessage }}
+      </div>
     </div>
 
     <hr>

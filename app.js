@@ -4,7 +4,7 @@ Vue.createApp({
   data() {
     
     let id = 0;
-    let isErrorIni = false;
+    let isErrorIni = 1;
 
     return {
       
